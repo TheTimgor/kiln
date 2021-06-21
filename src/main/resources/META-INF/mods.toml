@@ -3,10 +3,10 @@ loaderVersion="[36,)"
 license="MIT"
 
 [[mods]]
-modId="kiln"
+modId="kilnmod"
 version="${file.jarVersion}"
-displayName="kiln"
-description="funky kiln block smelt ya clay"
+displayName="Kiln: A mod!"
+description="The Funky kiln Block smelt Ya clay"
 
 [[dependencies.kiln]]
     modId="forge"

@@ -1,0 +1,6 @@
+{
+  "variants": {
+    "": {"model": "kilnmod:block/kiln_block"},
+    "axis=y": {"model": "block/oak_log"}
+  }
+}
