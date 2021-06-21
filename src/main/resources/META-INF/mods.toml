@@ -1,23 +1,23 @@
 modLoader="javafml"
 loaderVersion="[36,)"
-license="All rights reserved"
+license="MIT"
 
 [[mods]]
 modId="kiln"
-version="0.1"
+version="${file.jarVersion}"
 displayName="kiln"
 description="funky kiln block smelt ya clay"
 
 [[dependencies.kiln]]
     modId="forge"
     mandatory=true
-    versionRange="[36,)"
+    versionRange="[36.1.32,)"
     ordering="NONE"
     side="BOTH"
 
 [[dependencies.kiln]]
     modId="minecraft"
     mandatory=true
-    versionRange="[1.16.5]"
+    versionRange="[1.16.4,1.17)"
     ordering="NONE"
     side="BOTH"
