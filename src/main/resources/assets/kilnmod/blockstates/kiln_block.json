@@ -1,0 +1,5 @@
+{
+  "variants": {
+    "": {"model": "kilnmod:block/kiln_block"}
+  }
+}
