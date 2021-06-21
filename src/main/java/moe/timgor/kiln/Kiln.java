@@ -41,7 +41,8 @@ public class Kiln
 
         // Register ourselves for server and other game events we are interested in
 
-        ItemInit.Items.register(bus);
+        BlockInit.Blocks.register(bus);
+        BlockInit.Items.register(bus);
 
         MinecraftForge.EVENT_BUS.register(this);
     }
