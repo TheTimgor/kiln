@@ -1,20 +1,11 @@
 {
-  "parent": "block/cube_all",
+  "parent": "block/cube",
   "textures": {
-    "all": "kilnmod:block/kiln"
-  },
-  "elements": [
-    {
-      "from": [ 0, 0, 0 ],
-      "to": [ 16, 16, 16 ],
-      "faces": {
-        "down":  { "uv": [0,0, 16,16], "texture": "#all", "cullface": "down" },
-        "up":    { "uv": [0,0, 16,16], "texture": "#all", "cullface": "up" },
-        "north": { "uv": [0,0, 16,16], "texture": "#all", "cullface": "north" },
-        "south": { "uv": [0,0, 16,16], "texture": "#all", "cullface": "south" },
-        "west":  { "uv": [0,0, 16,16], "texture": "#all", "cullface": "west" },
-        "east":  { "uv": [0,0, 16,16], "texture": "#all", "cullface": "east" }
-      }
-    }
-  ]
+    "down": "kilnmod:block/kiln_bottom",
+    "up": "kilnmod:block/kiln_top",
+    "north": "kilnmod:block/kiln_front",
+    "south": "kilnmod:block/kiln_back",
+    "east": "kilnmod:block/kiln_side",
+    "west": "kilnmod:block/kiln_side"
+  }
 }
