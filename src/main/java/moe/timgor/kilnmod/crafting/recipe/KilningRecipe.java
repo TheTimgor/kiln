@@ -24,7 +24,7 @@ public class KilningRecipe extends AbstractCookingRecipe {
         @Nullable
         @Override
         public KilningRecipe fromJson(ResourceLocation recipeId, JsonObject json) {
-            String group = JSONUtils.getAsString(json, "group", "");
+            String s = JSONUtils.getAsString(json, "group", "");
             JsonElement jsonelement = (JsonElement)(JSONUtils.isArrayNode(json, "ingredient") ? JSONUtils.getAsJsonArray(json, "ingredient") : JSONUtils.getAsJsonObject(json, "ingredient"));
             Ingredient ingredient = Ingredient.fromJson(jsonelement);
             //Forge: Check if primitive string to keep vanilla or a object which can contain a count field.
@@ -32,25 +32,25 @@ public class KilningRecipe extends AbstractCookingRecipe {
             ItemStack itemstack;
             if (json.get("result").isJsonObject()) itemstack = ShapedRecipe.itemFromJson(JSONUtils.getAsJsonObject(json, "result"));
             else {
-                String result = JSONUtils.getAsString(json, "result");
-                ResourceLocation resourcelocation = new ResourceLocation(result);
+                String s1 = JSONUtils.getAsString(json, "result");
+                ResourceLocation resourcelocation = new ResourceLocation(s1);
                 itemstack = new ItemStack(Registry.ITEM.getOptional(resourcelocation).orElseThrow(() -> {
-                    return new IllegalStateException("Item: " + result + " does not exist");
+                    return new IllegalStateException("Item: " + s1 + " does not exist");
                 }));
             }
-            float xp = JSONUtils.getAsFloat(json, "experience", 0.0F);
-            int cookingTime = JSONUtils.getAsInt(json, "cookingtime", this.defaultCookingTime);
-            return new KilningRecipe(recipeId, group, ingredient, itemstack, xp, cookingTime);
+            float f = JSONUtils.getAsFloat(json, "experience", 0.0F);
+            int i = JSONUtils.getAsInt(json, "cookingtime", this.defaultCookingTime);
+            return new KilningRecipe(recipeId, s, ingredient, itemstack, f, i);
         }
 
         @Override
         public KilningRecipe fromNetwork(ResourceLocation recipeId, PacketBuffer buffer) {
-            String group = buffer.readUtf(32767);
+            String s = buffer.readUtf(32767);
             Ingredient ingredient = Ingredient.fromNetwork(buffer);
             ItemStack itemstack = buffer.readItem();
-            float xp = buffer.readFloat();
-            int cookingTime = buffer.readVarInt();
-            return new KilningRecipe(recipeId, group, ingredient, itemstack, xp, cookingTime);
+            float f = buffer.readFloat();
+            int i = buffer.readVarInt();
+            return new KilningRecipe(recipeId, s, ingredient, itemstack, f, i);
         }
 
         @Override

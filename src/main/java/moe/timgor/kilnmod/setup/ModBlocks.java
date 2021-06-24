@@ -1,5 +1,6 @@
 package moe.timgor.kilnmod.setup;
 
+import moe.timgor.kilnmod.KilnMod;
 import moe.timgor.kilnmod.block.kiln.KilnBlock;
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
@@ -9,9 +10,11 @@ import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
 import net.minecraftforge.fml.RegistryObject;
+import net.minecraftforge.fml.common.Mod;
 
 import java.util.function.Supplier;
 
+@Mod.EventBusSubscriber(modid = KilnMod.MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD)
 public class ModBlocks {
     public static final RegistryObject<Block> KILN_BLOCK = registerWithItem("kiln_block",() -> new KilnBlock(AbstractBlock.Properties.of(Material.STONE, MaterialColor.STONE)));
 

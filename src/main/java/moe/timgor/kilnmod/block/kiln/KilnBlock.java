@@ -7,7 +7,6 @@ import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.inventory.container.INamedContainerProvider;
 import net.minecraft.particles.ParticleTypes;
 import net.minecraft.state.DirectionProperty;
-import net.minecraft.tileentity.BlastFurnaceTileEntity;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.Direction;
 import net.minecraft.util.SoundCategory;
@@ -30,7 +29,7 @@ public class KilnBlock extends AbstractFurnaceBlock {
     }
 
     public TileEntity newBlockEntity(IBlockReader reader) {
-        return new BlastFurnaceTileEntity();
+        return new KilnTileEntity();
     }
 
     protected void openContainer(World world, BlockPos pos, PlayerEntity player) {

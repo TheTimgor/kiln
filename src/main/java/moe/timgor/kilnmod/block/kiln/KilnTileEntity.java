@@ -3,7 +3,6 @@ package moe.timgor.kilnmod.block.kiln;
 import moe.timgor.kilnmod.setup.ModRecipes;
 import moe.timgor.kilnmod.setup.ModTileEntityTypes;
 import net.minecraft.entity.player.PlayerInventory;
-import net.minecraft.inventory.container.BlastFurnaceContainer;
 import net.minecraft.inventory.container.Container;
 import net.minecraft.item.ItemStack;
 import net.minecraft.tileentity.AbstractFurnaceTileEntity;
