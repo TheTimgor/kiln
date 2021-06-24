@@ -8,16 +8,16 @@ version="${file.jarVersion}"
 displayName="Kiln: A mod!"
 description="The Funky kiln Block smelt Ya clay"
 
-[[dependencies.kiln]]
+[[dependencies.kilnmod]]
     modId="forge"
     mandatory=true
-    versionRange="[36.1.32,)"
+    versionRange="[36,)"
     ordering="NONE"
     side="BOTH"
 
-[[dependencies.kiln]]
+[[dependencies.kilnmod]]
     modId="minecraft"
     mandatory=true
-    versionRange="[1.16.4,1.17)"
+    versionRange="[1.16.5,1.17)"
     ordering="NONE"
     side="BOTH"
