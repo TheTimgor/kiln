@@ -2,9 +2,11 @@ package moe.timgor.kilnmod.block.kiln;
 
 import net.minecraft.block.AbstractFurnaceBlock;
 import net.minecraft.block.BlockState;
+import net.minecraft.block.HorizontalBlock;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.inventory.container.INamedContainerProvider;
 import net.minecraft.particles.ParticleTypes;
+import net.minecraft.state.DirectionProperty;
 import net.minecraft.tileentity.BlastFurnaceTileEntity;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.Direction;
@@ -19,9 +21,14 @@ import net.minecraftforge.api.distmarker.OnlyIn;
 import java.util.Random;
 
 public class KilnBlock extends AbstractFurnaceBlock {
-    public KilnBlock(Properties p) {
-        super(p);
+
+    public static final DirectionProperty FACING = HorizontalBlock.FACING;
+
+    public KilnBlock(Properties properties) {
+        super(properties);
+        this.registerDefaultState(this.stateDefinition.any().setValue(LIT, Boolean.FALSE));
     }
+
     public TileEntity newBlockEntity(IBlockReader reader) {
         return new BlastFurnaceTileEntity();
     }

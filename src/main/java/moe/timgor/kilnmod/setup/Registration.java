@@ -24,13 +24,13 @@ public class Registration {
     public static void register(){
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
         BLOCKS.register(modEventBus);
-        //CONTAINERS.register(modEventBus);
+        CONTAINERS.register(modEventBus);
         ITEMS.register(modEventBus);
         RECIPE_SERIALIZERS.register(modEventBus);
         TILE_ENTITIES.register(modEventBus);
 
         ModBlocks.register();
-        //ModContainerTypes.register();
+        ModContainerTypes.register();
         ModItems.register();
         ModRecipes.register();
         ModTileEntityTypes.register();

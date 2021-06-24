@@ -32,10 +32,10 @@ public class KilningRecipe extends AbstractCookingRecipe {
             ItemStack itemstack;
             if (json.get("result").isJsonObject()) itemstack = ShapedRecipe.itemFromJson(JSONUtils.getAsJsonObject(json, "result"));
             else {
-                String s1 = JSONUtils.getAsString(json, "result");
-                ResourceLocation resourcelocation = new ResourceLocation(s1);
+                String result = JSONUtils.getAsString(json, "result");
+                ResourceLocation resourcelocation = new ResourceLocation(result);
                 itemstack = new ItemStack(Registry.ITEM.getOptional(resourcelocation).orElseThrow(() -> {
-                    return new IllegalStateException("Item: " + s1 + " does not exist");
+                    return new IllegalStateException("Item: " + result + " does not exist");
                 }));
             }
             float xp = JSONUtils.getAsFloat(json, "experience", 0.0F);

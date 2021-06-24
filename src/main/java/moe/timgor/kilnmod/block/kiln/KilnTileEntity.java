@@ -7,11 +7,8 @@ import net.minecraft.inventory.container.BlastFurnaceContainer;
 import net.minecraft.inventory.container.Container;
 import net.minecraft.item.ItemStack;
 import net.minecraft.tileentity.AbstractFurnaceTileEntity;
-import net.minecraft.tileentity.TileEntityType;
 import net.minecraft.util.text.ITextComponent;
 import net.minecraft.util.text.TranslationTextComponent;
-import net.minecraftforge.event.RegistryEvent;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
 
 public class KilnTileEntity extends AbstractFurnaceTileEntity {
 
@@ -28,6 +25,6 @@ public class KilnTileEntity extends AbstractFurnaceTileEntity {
     }
 
     protected Container createMenu(int containerId, PlayerInventory playerInventory) {
-        return new BlastFurnaceContainer(containerId, playerInventory, this, this.dataAccess);
+        return new KilnContainer(containerId, playerInventory, this, this.dataAccess);
     }
 }

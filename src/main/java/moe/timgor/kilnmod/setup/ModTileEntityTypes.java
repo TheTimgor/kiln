@@ -9,11 +9,7 @@ import net.minecraftforge.fml.RegistryObject;
 import java.util.function.Supplier;
 
 public class ModTileEntityTypes {
-    public static final RegistryObject<TileEntityType<KilnTileEntity>> KILN_TE = register(
-            "kiln_te",
-            KilnTileEntity::new,
-            ModBlocks.KILN_BLOCK
-    );
+    public static final RegistryObject<TileEntityType<KilnTileEntity>> KILN_TE = register("kiln_te", KilnTileEntity::new, ModBlocks.KILN_BLOCK);
 
     static void register() {}
 
