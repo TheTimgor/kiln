@@ -1,6 +1,8 @@
 package moe.timgor.kilnmod;
 
 import net.minecraft.block.Blocks;
+import net.minecraft.tileentity.FurnaceTileEntity;
+import net.minecraft.tileentity.TileEntityType;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.common.Mod;
@@ -11,8 +13,8 @@ import org.apache.logging.log4j.Logger;
 
 // The value here should match an entry in the META-INF/mods.toml file
 @Mod(KilnMod.MOD_ID)
-public class KilnMod
-{
+public class KilnMod {
+
     // Directly reference a log4j logger.
     public static final Logger LOGGER = LogManager.getLogger();
     public static final String MOD_ID = "kilnmod";

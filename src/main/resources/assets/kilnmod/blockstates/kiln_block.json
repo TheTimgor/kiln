@@ -1,5 +1,7 @@
 {
   "variants": {
-    "": {"model": "kilnmod:block/kiln_block"}
+    "lit=true": {"model": "kilnmod:block/kiln_block"},
+    "lit=false": {"model": "kilnmod:block/kiln_block"}
+
   }
 }
